@@ -89,29 +89,25 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/messageOutText"
-            android:text="m" />
+            android:id="@+id/messageOutText" />
 
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/nameOutText"
-            android:text="n" />
+            android:id="@+id/nameOutText" />
 
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/emailOutText"
-            android:text="e" />
+            android:id="@+id/emailOutText" />
 
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/phoneOutText"
-            android:text="p" />
+            android:id="@+id/phoneOutText" />
 
     </LinearLayout>
 
