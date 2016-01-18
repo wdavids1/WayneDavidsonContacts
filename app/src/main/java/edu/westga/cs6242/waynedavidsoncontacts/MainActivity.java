@@ -8,8 +8,34 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    public void saveButtonClick(View v) {
+
+        TextView inputNameText = (TextView) findViewById(R.id.nameText);
+        TextView inputEmailText = (TextView) findViewById(R.id.emailText);
+        TextView inputPhoneText = (TextView) findViewById(R.id.phoneText);
+        RadioButton cellButton = (RadioButton)findViewById(R.id.cellButton);
+
+        TextView outputMessageText = (TextView) findViewById(R.id.messageOutText);
+        TextView outputNameText = (TextView) findViewById(R.id.nameOutText);
+        TextView outputEmailText = (TextView) findViewById(R.id.emailOutText);
+        TextView outputPhoneText = (TextView) findViewById(R.id.phoneOutText);
+
+        outputMessageText.setText("Your contact has been saved.");
+        outputNameText.setText("Name: " + inputNameText.getText());
+        outputEmailText.setText("Email: " + inputEmailText.getText());
+        if (cellButton.isChecked()) {
+            outputPhoneText.setText("Phone: " + inputPhoneText.getText() + " (Cell)");
+        } else {
+            outputPhoneText.setText("Phone: " + inputPhoneText.getText() + " (Landline)");
+        }
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

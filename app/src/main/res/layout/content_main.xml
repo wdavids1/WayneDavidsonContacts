@@ -12,8 +12,120 @@
     tools:context="edu.westga.cs6242.waynedavidsoncontacts.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/nameText"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button"
+        android:selectAllOnFocus="false"
+        android:hint="Name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailText"
+        android:layout_below="@+id/nameText"
+        android:layout_alignLeft="@+id/nameText"
+        android:layout_alignStart="@+id/nameText"
+        android:selectAllOnFocus="false"
+        android:hint="Email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/phoneText"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_toLeftOf="@+id/radioGroup"
+        android:layout_toStartOf="@+id/radioGroup"
+        android:phoneNumber="true"
+        android:selectAllOnFocus="false"
+        android:hint="Phone" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/emailText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/emailText"
+        android:layout_toEndOf="@+id/emailText">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cell"
+            android:id="@+id/cellButton"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Landline"
+            android:id="@+id/landlineButton" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button"
+        android:layout_below="@+id/phoneText"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveButtonClick"
+        android:nestedScrollingEnabled="false" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/nameOutText"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/phoneText"
+        android:layout_alignStart="@+id/phoneText"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/emailOutText"
+        android:layout_below="@+id/nameOutText"
+        android:layout_alignLeft="@+id/nameOutText"
+        android:layout_alignStart="@+id/nameOutText"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/phoneOutText"
+        android:layout_below="@+id/emailOutText"
+        android:layout_alignLeft="@+id/emailOutText"
+        android:layout_alignStart="@+id/emailOutText"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/messageOutText"
+        android:layout_above="@+id/nameOutText"
+        android:layout_alignLeft="@+id/nameOutText"
+        android:layout_alignStart="@+id/nameOutText"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup" />
+
 </RelativeLayout>
